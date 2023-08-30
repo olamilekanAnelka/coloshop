@@ -1,0 +1,80 @@
+/*the gallery styling */
+.app__gallery-parent{
+    width: 100%;
+    display: flex; 
+    gap: 3.3%;
+}
+.app__gallery-box{
+    width: 30%;
+    height: 40vh;
+    margin: 5rem 0;
+    background: var(--color-grayBg); 
+
+    
+}
+
+.women__banner{
+background-image: url(https://res.cloudinary.com/ilove2support/image/upload/v1677073183/ecommerce/Hair-salon/curly2_xtbxx6.png);
+background-size: cover;
+position: relative;
+}
+
+.accesories__banner{
+    background-image: url(https://res.cloudinary.com/ilove2support/image/upload/v1628766261/samples/ecommerce/shoes.png);
+    background-size: cover;
+    position: relative;
+}
+
+.men__banner{
+    background-image: url(https://res.cloudinary.com/ilove2support/image/upload/v1676329649/ecommerce/polo3_ggueox.png);
+    background-size: cover;
+    position: relative;
+}
+
+.gallery__banner{
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    background: var(--color-white);
+    color: var(--color-black);
+    font-weight: 500;
+    
+}
+
+
+
+
+@media screen and (max-width: 1024px){
+    .app__gallery-box{
+        height: 20vh;
+    }
+
+    .gallery__banner{
+        top: 30%;
+        left: 20%;
+        padding: 8px 8px;
+        height: auto;
+        font-size: 15px;
+    }
+  }
+
+  
+  
+  @media screen and (max-width: 650PX){
+    .app__gallery-parent{
+        flex-direction: column;
+        gap: 0rem;
+    }
+    .app__gallery-box{
+        width: 100%;
+        height: 30vh;
+        margin: 1rem 0; 
+   
+    }
+    .gallery__banner{
+        top: 50%;
+        left: 30%;
+        padding: 10px;
+        font-size: 30px;
+    }
+  }

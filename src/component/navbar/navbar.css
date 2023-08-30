@@ -1,0 +1,165 @@
+/* the navbar styling  */
+
+
+.app__navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;   
+    border: none;
+    border-bottom: 1px solid var(--color-grayBg);
+    overflow-x: hidden;
+}
+.app__navbar-brand{
+    color: var(--color-black);
+}
+
+.app__navbar-brand span{
+    color: var(--color-red);
+}
+
+.app__navbar-ul {
+    display: flex;
+   
+}
+
+
+
+.app__navbar-ul a{
+     padding: 0px 7px;
+     font-size: 20px;
+     font-weight: 300;
+     color: var(--color-black);
+     cursor: pointer;
+}
+
+.app__navbar-ul a:hover,
+.app__navbar-ul a:active{
+    color: var(--color-grayBg);
+    transition: var(--transition);
+}
+.app__navbar-logo_parent{
+    display: flex;
+
+}
+
+
+.app__navbar-logo a{
+    width: 40px;
+    height: 40px;
+    padding: 0px 6px;
+    cursor: pointer;
+    color: var(--color-black);
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app__navbar-logo a:hover,
+.app__navbar-logo a:active{
+    color: var(--color-red);
+    transform: var(--transition);
+}
+
+.navbar__cartlogo{
+    width: 100%;
+    height: 100%;
+    background: var(--color-grayBg);
+    border-radius: 50%;
+
+}
+
+.app__navbar-smallscreen{
+  display: none;
+}
+
+
+@media screen and (max-width: 1024px){
+
+
+.app__navbar-ul{
+    display: none;
+}
+ 
+.app__navbar-smallscreen{
+    display: block;
+}
+
+
+.app__navbar-smallscreen {
+    cursor: pointer;
+  }
+  
+  .app__navbar-smallscreen_overlay {
+    position: fixed;
+    top: 0;
+    right: -100%; 
+    width: 50%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 9999;
+    transition: right 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .app__navbar-smallscreen_overlay.open {
+    right: 0; 
+  }
+  
+  .overlay__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    color: var(--color-white);
+  }
+  
+  .app__navbar-smallscreen-links {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 3rem;
+  }
+    
+  
+  .app__navbar-smallscreen-links li {
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid var(--color-grayBg);
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .app__navbar-smallscreen-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+
+  
+}
+
+@media screen and (max-width: 650PX){
+.app__navbar-logo_parent{
+  display: none;
+}
+.app__navbar-smallscreen_overlay{
+    width: 100%;
+    transition: var(--transition);
+}
+
+}
